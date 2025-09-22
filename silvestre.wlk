@@ -5,7 +5,11 @@ object silvestre {
     var property image = "silvestre.png"
 
     method position() {
-        return game.at(pepita.position().x(), 0)
+        if (pepita.position().x() > 3){
+            return game.at(pepita.position().x(), 0)
+        } else {
+            return game.at(3,0)
+        }
     }
 }
 
