@@ -3,7 +3,7 @@ import pepita.*
 import nido.*
 import silvestre.*
 import pocketPepita.*
-
+import comidas.*
 
 program pepitaGame {
 	game.title("Pepita") 	//Valor por defecto "Wollok Game"
@@ -16,15 +16,15 @@ program pepitaGame {
 	game.boardGround("fondo.jpg")
 	game.addVisual(pocketPepita)	
 	game.addVisual(nido)
-	game.addVisualCharacter(pepita)
+	game.addVisual(pepita)
 	game.addVisual(silvestre)
+	game.addVisual(alpiste)
+	game.addVisual(manzana)
 
 	keyboard.left().onPressDo({pepita.moverseIzquierda()})
 	keyboard.right().onPressDo({pepita.moverseDerecha()})
 	keyboard.up().onPressDo({pepita.moverseArriba()})
 	keyboard.down().onPressDo({pepita.moverseAbajo()})
-	
-
 
 	game.start()	
 }

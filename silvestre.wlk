@@ -1,4 +1,6 @@
 import pepita.*
+import wollok.game.*
+
 
 object silvestre {
 	var property position = game.at(0,2) 
@@ -10,6 +12,11 @@ object silvestre {
         } else {
             return game.at(3,0)
         }
+    }
+
+    method colisiono(objeto) {
+        objeto.energia(0)
+        game.say(objeto, objeto.perdio())
     }
 }
 
